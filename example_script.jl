@@ -5,5 +5,15 @@
 #                                                                               
 #############################################################################
 #############################################################################
+using Pkg
+Pkg.activate(".")
+
+
+using Random, Distributions
+Random.seed!(0)
 
 include("summary-stats-project.jl")
+
+data = rand(Uniform(10,20), 10^3)
+ds = DataStore(data)
+println(summarize(ds))

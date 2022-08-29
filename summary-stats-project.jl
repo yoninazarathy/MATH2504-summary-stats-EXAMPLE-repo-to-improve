@@ -6,6 +6,8 @@
 #############################################################################
 #############################################################################
 
-using Statistics
+using Statistics, StatsBase
 
-include
+include("src/types.jl")
+    include("src/moments/moments.jl")
+    include("src/order-statistics/quantiles.jl")
